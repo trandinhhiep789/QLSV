@@ -33,4 +33,10 @@ var SInhVienServices = function(){
         })
         return promise
     }
+
+    //tính năng tìm kiếm SV
+    this.timKiemSinhVien = function(){
+        console.log('chức năng tìm kiếm sv')
+        return ''
+    }
 }
