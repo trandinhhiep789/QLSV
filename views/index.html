@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>QUAN LY SINH VIEN</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <div class="container">
+        <h2 class="text-center dispay-4">Quản Lý Sinh Viên</h2>
+
+        <div class="form-group">
+            <p>Mã Sinh Viên</p>
+            <input type="text" class="form-control" id="maSinhVien">
+            <p id="loi_MaSV" class="text-danger"></p>
+            <p id="loi_DoDai" class="text-danger"></p>
+        </div>
+        <div class="form-group">
+            <p>Tên Sinh Viên</p>
+            <input type="text" class="form-control" id="tenSinhVien">
+            <p id="loi_TenSV" class="text-danger"></p>
+            <p id="tatCaKiTu_TenSV" class="text-danger"></p>
+        </div>
+        <div class="form-group">
+            <p>Email</p>
+            <input type="text" class="form-control" id="emailSinhVien">
+            <p id="loi_EmailSV" class="text-danger"></p>
+            <p id="loi_DinhDangEmailSV" class="text-danger"></p>
+        </div>
+        
+        <div class="form-group">
+            <p>Loại Sinh Viên</p>
+            <select name="" id="loaiSinhVien" class="form-control">
+                <option value="Giàu Sang">Giàu Sang</option>
+                <option value="Khó Khăn">Khó Khăn</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <p>Điểm Toán</p>
+                <input type="text" class="form-control" id="toan">
+                <p id="loi_Toan" class="text-danger"></p>
+                <p id="loi_So" class="text-danger"></p>
+                <p id="loi_GiaTri" class="text-danger"></p>
+            </div>
+            <div class="form-group col">
+                <p>Điểm Lý</p>
+                <input type="text" class="form-control" id="ly">
+                <p id="loi_Ly" class="text-danger"></p>
+            </div>
+            <div class="form-group col">
+                <p>Điểm Hóa</p>
+                <input type="text" class="form-control" id="hoa">
+                <p id="loi_Hoa" class="text-danger"></p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>Điểm Rèn Luyện</p>
+            <input type="text" class="form-control" id="renLuyen">
+            <p id="loi_RenLuyen" class="text-danger"></p>
+        </div>
+        <div class="form-group text-center">
+            <button id="btnThemSV" class="btn btn-success">Thêm Sinh Viên</button>
+            <button id="btnCapNhatSV" class="btn btn-info">Cập Nhật Sinh Viên</button>
+        </div>
+
+
+
+        <div class="tableSinhVien">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã Sinh Viên</th>
+                        <th>Tên Sinh Viên</th>
+                        <th>Email</th>
+                        <th>Loại Sinh Viên</th>
+                        <th>Điểm Trung Bình</th>
+                        <th>Điểm Rèn Luyện</th>
+                    </tr>
+
+                    <!-- tbody để gom nhóm -->
+                    <tbody id="tblSinhVien">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Models -->
+    <script src="../models/SinhVien.js"></script>
+    <script src="../models/Validation.js"></script>
+
+    <!-- Services giao tiếp backend -->
+    <script src="../servives/SinhVienServices.js"></script>
+
+    <!-- Controllers -->
+    <!-- <script src="../controllers/index.js"></script> -->
+
+    <!-- thư viện axios, để lấy dữ liệu từ API về -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js" integrity="sha512-nqIFZC8560+CqHgXKez61MI0f9XSTKLkm0zFVm/99Wt0jSTZ7yeeYwbzyl0SGn/s8Mulbdw+ScCG41hmO2+FKw==" crossorigin="anonymous"></script>
+
+    <!-- <script src="../controllers/callback.js"></script> -->
+    <script src="../controllers/indexAjax.js"></script>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
